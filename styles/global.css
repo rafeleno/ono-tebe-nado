@@ -1,3 +1,8 @@
+:root {
+    --font-family: "Raleway", sans-serif;
+    font-size: 20px;
+  }
+
 *,
 *::before,
 *::after {
@@ -8,6 +13,7 @@ body {
   width: 1100px;
   margin: 0 auto;
   font-family: Raleway, sans-serif;
+  font-weight: normal;
 }
 
 h1,
@@ -25,10 +31,29 @@ blockquote {
   padding: 0;
 }
 
+h2 {
+    text-transform: uppercase;
+}
+
 a {
   color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+a.active {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 img {
   width: 100%;
+}
+
+address {
+    text-decoration: none;
 }
