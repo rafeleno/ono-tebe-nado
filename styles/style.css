@@ -10,38 +10,32 @@
 }
 
 .header__menu {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
     margin-top: 92px;
-    max-width: 1052px;
+    max-width: 1000px;
     margin-right: auto;
     margin-left: auto;
     font-size: 18px;
-    height: 105px;
-    padding-left: 27px;
-    padding-right: 25px;
 }
 
 .header__menu__list {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 12px;
+    gap: 33px;
 }
 
-.header__menu__item-bullet {
-    display: block;
-    height: 7px;
-    width: 7px;
-    border: 1px solid black;
-    border-radius: 50%;
+.header__menu__item {
+    list-style: circle;
+}
+
+.header__menu__item:nth-child(1) {
+    list-style: none;
 }
 
 .header__logo {
-    transform: translateX(-50%);
-    left: 50%;
-    position: absolute;
+    justify-self: center;
 }
 
 .header__logo-image {
@@ -49,7 +43,7 @@
     width: 148px;
 }
 
-.header__links {
+.address {
     line-height: 120%;
     margin-left: auto;
     margin-top: auto;
@@ -57,7 +51,10 @@
     display: flex;
     flex-wrap: wrap;
     width: 240px;
-    height: 98px;
+}
+
+.location-name {
+    text-decoration: none;
 }
 
 .header__links-list {
@@ -70,14 +67,14 @@
     position: relative;
     max-width: 1100px;
     min-height: 757px;
-    margin-top: 96px;
+    margin-top: 92px;
     padding-top: 165px;
     padding-left: 50px;
     padding-right: 50px;
     padding-bottom: 51px;
     background-image: url(../images/cover.jpg);
-    background-size: 125%;
-    background-position: 51% 1%;
+    background-size: cover;
+    background-position: center;
 }
 
 .opacity-lay {
@@ -88,7 +85,7 @@
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .cover-container {
@@ -103,38 +100,34 @@
     flex-wrap: wrap;
     font-size: 100px;
     letter-spacing: 0.3em;
-    line-height: 121px;
+    line-height: 122px;
     text-transform: uppercase;
     color: #fff;
 }
 
 .aligned-text {
-    display: inline;
-    height: 98px;
+    display: flex;
+    width: 100%;
 }
 
 .aligned-text_left {
-    width: 100%;
-    display: block;
-    text-align: left;
+    margin-right: auto;
 }
 
 .aligned-text_center {
-    position: relative;
-    width: 100%;
-    right: 30px;
-    /* top: 10px; */
-    display: inline;
-    justify-self: center;
-    text-align: center;
+    margin-left: 287px;
 }
 
 .aligned-text_right {
-    position: relative;
-    width: 100%;
-    /* top: 10px; */
-    display: block;
-    text-align: right;
+    margin-left: auto;
+}
+
+.letter-spacing-extended {
+    letter-spacing: 0.6em;
+}
+
+.no-letter-spacing {
+    letter-spacing: 0;
 }
 
 .cover__description {
@@ -142,7 +135,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 51px;
     margin-top: auto;
 }
 
@@ -161,20 +153,13 @@
     width: 256px;
     height: 51px;
     background-color: transparent;
-    border: solid 1px white;
+    border: solid 1px currentColor;
+    font-family: "Raleway", sans-serif;;
     font-weight: 500;
     font-size: 22px;
     text-transform: uppercase;
     text-align: center;
     color: #fff;
-}
-
-.no-letter-spacing {
-    letter-spacing: 0;
-}
-
-.letter-spacing-extended {
-    letter-spacing: 0.6em;
 }
 
 .lots {
@@ -183,7 +168,6 @@
 
 .lots .container {
     max-width: 1052px;
-    min-height: 692px;
 }
 
 .lots__title {
@@ -200,7 +184,6 @@
     margin-top: 27px;
     margin-bottom: 30px;
     max-width: 1052px;
-    min-height: 563px;
 }
 
 .lots__list:nth-child(1),
@@ -225,7 +208,7 @@
     flex-wrap: wrap;
     align-content: space-between;
     max-width: 334px;
-    height: 563px;
+    min-height: 563px;
     padding: 51px 40px 48px 40px;
 }
 
@@ -249,15 +232,15 @@
     color: #fff;
 }
 
-.lots__list-item-first {
+.lots__list-item__directors-film {
     background-image: url(../images/card-lot-01.jpg);
 }
 
-.lots__list-item-second {
+.lots__list-item__book-about-borring-day {
     background-image: url(../images/card-lot-02.jpg);
 }
 
-.lots__list-item-third {
+.lots__list-item__art-that-can-reproduce-a-5th-years-old {
     background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -278,9 +261,8 @@
     max-width: 1052px;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: 240px 312px;
     column-gap: 72px;
-    row-gap: 7px;
+    row-gap: 3px;
     padding-left: 47px;
     padding-top: 38px;
     margin: auto;
@@ -304,6 +286,7 @@
 .about__text {
     line-height: 120%;
     letter-spacing: 0.01em;
+    margin-bottom: 24px;
 }
 
 .about__text-letter-spacing-shortened {
@@ -330,7 +313,7 @@
 }
 
 footer {
-    padding-top: 180px;
+    padding-top: 156px;
     padding-bottom: 88px;
 }
 
@@ -344,9 +327,10 @@ footer {
     width: 1000px;
 }
 
-.footer__links-list {
+.footer-address {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     gap: 4px;
 }
 
